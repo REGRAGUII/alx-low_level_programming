@@ -1,30 +1,43 @@
 #include "main.h"
-int actual_sqrt_recursion(int n, int i);
 /**
-*initialization-int n and int i
-*_sqrt_recursion- returns the natural square root of a number
-*@n: number to calculate the square toot of
-*Return: the resulting square root
-*/
+ * _sqrt_recursion2 -  returns the natural square root of a number
+ * @n: input int
+ * @sqrt: input float
+ * @res : input float
+ * Return: -
+ */
+float _sqrt_recursion2(int n, float sqrt, float res)
+{
+	if (sqrt == res)
+	{
+		if ((int)sqrt == sqrt)
+		{
+			return (sqrt);
+		}
+		else
+		{
+			return (-1);
+		}
+	}
+	res = sqrt;
+	sqrt = (n / res + res) / 2;
+	return (_sqrt_recursion2(n, sqrt, res));
+}
+
+/**
+ * _sqrt_recursion -  returns the natural square root of a number.
+ * @n: input int
+ * Return: +
+ */
 int _sqrt_recursion(int n)
 {
+	float res, sqrt;
+
+	sqrt = n / 2;
+	res = 0;
+	if (n == 1)
+		return (1);
 	if (n < 0)
 		return (-1);
-	return (actual_sqrt_recursion(n, 0));
-}
-/**
- * actual_sqrt_recursion - recurses to find the natural
- * square root of a number
- * @n: number to calculate the sqaure root of
- * @i: iterator
- *
- * Return: the resulting square root
- */
-int actual_sqrt_recursion(int n, int i)
-{
-	if (i * i > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (actual_sqrt_recursion(n, i + 1));
+	return (_sqrt_recursion2(n, sqrt, res));
 }

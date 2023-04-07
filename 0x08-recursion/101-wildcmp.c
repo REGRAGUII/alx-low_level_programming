@@ -3,8 +3,8 @@
 /**
 *wildcmp-Compare strings
 *@s1: Pointer to string params
-*@a2: pointer to string params
-*Retun:0
+*@s2: pointer to string params
+*Return: always 0 succes
 */
 int wildcmp(char *s1, char *s2)
 {
