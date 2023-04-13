@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * free_grid - function that concatenates two strings
  * @grid: first bytes of the memory
