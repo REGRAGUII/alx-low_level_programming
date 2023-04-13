@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * alloc_grid - function that concatenates two strings
  * @width: first bytes of the memory
