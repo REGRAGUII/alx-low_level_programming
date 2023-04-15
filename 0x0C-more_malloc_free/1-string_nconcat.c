@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-/*
- * *string_nconcat - concatenates n bytes of a string too another string
+/**
+ * *string_nconcat- Concatenates n bytes of a string too another string
  * @s1: head string
  * @s2: tail string
  * @n : number of bytes from s2 to concatenate to s1
- * Return: pointer to the resulting string 
+ * Return: pointer to the resulting string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
