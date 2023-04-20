@@ -1,7 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
-
 #define ARGV(X, S) (argv[X][0] == S)
 
 /**
@@ -9,7 +8,6 @@
  * the given operator.
  * @argc: Number of agruments
  * @argv: The string value of the arguments.
- *
  * Return: 0 (On Sucess)
  */
 int main(int argc, char *argv[])
