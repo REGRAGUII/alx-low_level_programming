@@ -1,1 +1,1 @@
-C - HELLO WORLD
+C - Static libraries
