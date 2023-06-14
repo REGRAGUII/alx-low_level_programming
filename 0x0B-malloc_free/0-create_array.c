@@ -1,21 +1,25 @@
 #include "main.h"
 /**
- * create_array - create array of size and assign chcar c
- * @s: size of array
- * @c: char to assign 
- * Description: create array of size and assign char c
- * Return: pointer to array ,NULL if fail
+ * create_array - function that creates an array of chars,
+ *  and initializes it with a specific char
+ * @size: first bytes of the memory
+ * @c: constant byte b
+ * Return: pointer to the resulting string dests
  */
 char *create_array(unsigned int size, char c)
 {
 	char *s;
-	int i;
+	int i = size;
 
 	s = malloc(sizeof(char) * size);
 	if (size == 0 || s == NULL)
+	{
 		return (NULL);
-
-	for (i = 0;i < size;i++)
+	}
+	while (i >= 0)
+	{
 		s[i] = c;
+		i--;
+	}
 	return (s);
 }
