@@ -1,11 +1,10 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
- * print_numbers - entry point
- * @separator: size of triangle
- * @n: size of triangle
- * Description: --
- * Return: --
+ * print_numbers - print numbers
+ * @separator:seperator beetwen num
+ * @n: number to sum
+ * Return: num
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -15,7 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < (int)n; i++)
 	{
-		printf("%d%s", va_arg(args, int),i != (int)n - 1 && separator != NULL ? separator : "");
+		printf("%d%s", va_arg(args, int), i != (int)n - 1 && separator != NULL ? separator : "");
 	}
 	va_end(args);
 	printf("\n");
